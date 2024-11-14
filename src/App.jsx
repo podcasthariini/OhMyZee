@@ -6,15 +6,17 @@ import echidnaImage from "../src/assets/echidna.jpg";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const handleClick = () => {
+    window.alert("hahaha kasian wibu halu");
+  };
   return (
-    <div className="flex w-full bg-black min-h-screen text-white">
+    <div className="flex w-full bg-black h-screen text-white">
       {!isOpen ? (
         <div className="mt-16 flex flex-col w-full h-full items-center">
           <img src={nikahFixLogo} alt="NikahFix Logo" className="w-32 h-auto" />
           <p className="mt-16 font-sans text-lg">Who's Watching</p>
           <div
-            className="mt-10 hover:scale-125 flex flex-col items-center transition-transform duration-200"
+            className="mt-10 hover:scale-125 flex flex-col items-center transition-transform duration-200 cursor-pointer"
             onClick={() => setIsOpen(true)}
           >
             <img src={guestIcon} alt="Guest Icon" className="w-24 h-auto" />
@@ -25,14 +27,14 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="flex w-full flex-col items-center">
+        <div className="flex w-full flex-col items-center cursor-not-allowed">
           <div className="w-full max-w-md mx-auto">
             <div
-              className="relative w-full pb-[140%] bg-cover bg-center"
+              className="relative w-full pb-[130%] bg-cover bg-center"
               style={{ backgroundImage: `url(${echidnaImage})` }}
             >
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50" />
-              <div className="absolute inset-0 flex flex-col justify-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
+              <div className="absolute inset-0 flex flex-col justify-end p-4 pb-8">
                 <img
                   src={nikahFixLogo}
                   alt="NikahFix Logo"
@@ -68,7 +70,10 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="mt-4 flex flex-col items-center cursor-pointer">
+          <div
+            className="flex flex-col items-center cursor-pointer"
+            onClick={handleClick}
+          >
             <ChevronUp className="w-12 h-12 animate-bounce" />
             <span className="text-lg font-bold font-sans">SEE THE DETAIL</span>
           </div>
