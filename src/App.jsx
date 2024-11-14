@@ -9,6 +9,7 @@ export default function App() {
   const handleClick = () => {
     window.alert("hahaha kasian wibu halu");
   };
+
   return (
     <div className="flex w-full bg-black h-svh text-white">
       {!isOpen ? (
@@ -27,14 +28,14 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="flex w-full flex-col items-center cursor-not-allowed max-h-svh">
-          <div className="w-full max-w-md mx-auto">
+        <div className="flex w-full flex-col items-center cursor-not-allowed h-svh">
+          <div className="w-full max-w-md mx-auto h-full flex flex-col">
             <div
-              className="relative w-full pb-[160%] bg-cover bg-center"
+              className="relative w-full flex-grow bg-cover bg-center flex flex-col justify-end"
               style={{ backgroundImage: `url(${echidnaImage})` }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
-              <div className="absolute inset-0 flex flex-col justify-end p-4 pb-8">
+              <div className="relative z-10 flex flex-col justify-end p-4">
                 <img
                   src={nikahFixLogo}
                   alt="NikahFix Logo"
@@ -68,7 +69,7 @@ export default function App() {
                   ))}
                 </div>
                 <div
-                  className="mt-2 flex flex-col items-center cursor-pointer"
+                  className="mt-2 flex flex-col items-center cursor-pointer pb-8"
                   onClick={handleClick}
                 >
                   <ChevronUp className="w-12 h-12 animate-bounce" />
