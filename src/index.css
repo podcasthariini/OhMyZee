@@ -11,20 +11,3 @@
     width: 100px;
     height: 100px;
 }
-@keyframes upDown {
-    0% {
-        transform: translateY(-10px);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(-10px);
-    }
-}
-
-.animate-upDown {
-    animation: upDown 1s ease-in-out infinite;
-}
