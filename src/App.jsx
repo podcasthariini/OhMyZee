@@ -12,7 +12,7 @@ export default function App() {
   return (
     <div className="flex w-full bg-black h-screen text-white">
       {!isOpen ? (
-        <div className="mt-16 flex flex-col w-full h-full items-center">
+        <div className="mt-16 flex flex-col w-full items-center max-h-screen">
           <img src={nikahFixLogo} alt="NikahFix Logo" className="w-32 h-auto" />
           <p className="mt-16 font-sans text-lg">Who's Watching</p>
           <div
@@ -27,7 +27,7 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="flex w-full flex-col items-center cursor-not-allowed">
+        <div className="flex w-full flex-col items-center cursor-not-allowed max-h-screen">
           <div className="w-full max-w-md mx-auto">
             <div
               className="relative w-full pb-[130%] bg-cover bg-center"
@@ -71,7 +71,7 @@ export default function App() {
             </div>
           </div>
           <div
-            className="flex flex-col items-center cursor-pointer"
+            className="mt-12 flex flex-col items-center cursor-pointer"
             onClick={handleClick}
           >
             <ChevronUp className="w-12 h-12 animate-bounce" />
