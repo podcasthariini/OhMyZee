@@ -10,9 +10,9 @@ export default function App() {
     window.alert("hahaha kasian wibu halu");
   };
   return (
-    <div className="flex w-full bg-black h-screen text-white">
+    <div className="flex w-full bg-black h-svh text-white">
       {!isOpen ? (
-        <div className="mt-16 flex flex-col w-full items-center max-h-screen">
+        <div className="mt-16 flex flex-col w-full items-center max-h-svh">
           <img src={nikahFixLogo} alt="NikahFix Logo" className="w-32 h-auto" />
           <p className="mt-16 font-sans text-lg">Who's Watching</p>
           <div
@@ -27,10 +27,10 @@ export default function App() {
           </div>
         </div>
       ) : (
-        <div className="flex w-full flex-col items-center cursor-not-allowed max-h-screen">
+        <div className="flex w-full flex-col items-center cursor-not-allowed max-h-svh">
           <div className="w-full max-w-md mx-auto">
             <div
-              className="relative w-full pb-[130%] bg-cover bg-center"
+              className="relative w-full pb-[160%] bg-cover bg-center"
               style={{ backgroundImage: `url(${echidnaImage})` }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent" />
@@ -52,7 +52,7 @@ export default function App() {
                     24 Desember 2024
                   </span>
                 </div>
-                <div className="flex flex-wrap mb-5">
+                <div className="flex flex-wrap mb-2">
                   {[
                     "romantic",
                     "getmarried",
@@ -67,15 +67,17 @@ export default function App() {
                     </span>
                   ))}
                 </div>
+                <div
+                  className="mt-2 flex flex-col items-center cursor-pointer"
+                  onClick={handleClick}
+                >
+                  <ChevronUp className="w-12 h-12 animate-bounce" />
+                  <span className="text-lg font-bold font-sans">
+                    SEE THE DETAIL
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div
-            className="mt-12 flex flex-col items-center cursor-pointer"
-            onClick={handleClick}
-          >
-            <ChevronUp className="w-12 h-12 animate-bounce" />
-            <span className="text-lg font-bold font-sans">SEE THE DETAIL</span>
           </div>
         </div>
       )}
