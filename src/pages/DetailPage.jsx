@@ -82,7 +82,6 @@ const DetailPage = () => {
             width='100%'
             height='auto'
             style={{ aspectRatio: '16 / 9' }}
-            l
           />
         </div>
         <div className='mt-4 px-4'>
