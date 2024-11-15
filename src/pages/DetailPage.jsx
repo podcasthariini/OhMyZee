@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import video from '../assets/prewed-echidna.mp4';
 import echidnaHeader from '../assets/echidna-header.webp';
-import ReactPlayer from 'react-player';
+import ReactPlayer from 'react-player/lazy';
 import netflixLogo from '../assets/netflix.png';
 import logo4k from '../assets/4k.webp';
 import lovely from '../assets/lovely.jpg';
@@ -82,6 +82,7 @@ const DetailPage = () => {
             width='100%'
             height='auto'
             style={{ aspectRatio: '16 / 9' }}
+            l
           />
         </div>
         <div className='mt-4 px-4'>
