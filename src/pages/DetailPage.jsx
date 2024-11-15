@@ -19,13 +19,10 @@ const DetailPage = () => {
     try {
       setLoading(true);
       const getComment = await axios.get(`${VITE_API_URL}/wish`);
-      // setComments(data);
-
       setComments(getComment?.data?.data);
     } catch (error) {
       alert('error when fetch comment');
       setComments([]);
-      setLoading(false);
     } finally {
       setLoading(false);
     }
@@ -41,10 +38,6 @@ const DetailPage = () => {
       if (insert.data) {
         alert(insert.data.message);
       }
-      // listComment.push({
-      //   name,
-      //   message,
-      // });
       fetchComment();
     } catch (error) {
       alert(error.response.data.message || 'error when input');
@@ -354,24 +347,25 @@ const DetailPage = () => {
                 className='max-h-[55svh] min-h-[15svh] overflow-y-auto mt-2 bottom-0'
                 ref={scrollCommentRef}
               >
-                {comments.map((item, i) => (
-                  <div key={i} className='flex pt-2'>
-                    <div className='flex items-center'>
-                      <img
-                        src={GuestIcon}
-                        alt=''
-                        srcSet=''
-                        className='w-6 h-auto'
-                      />
-                    </div>
-                    <div className='flex flex-col ps-2 justify-between items-start w-full h-full text-sm pt-2'>
-                      <div className='text-white text-sm capitalize'>
-                        {item.name}
+                {!loading &&
+                  comments?.map((item, i) => (
+                    <div key={i} className='flex pt-2'>
+                      <div className='flex items-center'>
+                        <img
+                          src={GuestIcon}
+                          alt=''
+                          srcSet=''
+                          className='w-6 h-auto'
+                        />
                       </div>
-                      <div className='text-gray-400'>{item.message}</div>
+                      <div className='flex flex-col ps-2 justify-between items-start w-full h-full text-sm pt-2'>
+                        <div className='text-white text-sm capitalize'>
+                          {item.name}
+                        </div>
+                        <div className='text-gray-400'>{item.message}</div>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
 
               <form onSubmit={handleSubmit} className='space-y-4 mt-4 relative'>
