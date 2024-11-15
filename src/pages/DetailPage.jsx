@@ -26,7 +26,7 @@ const DetailPage = () => {
       alert('error when fetch comment');
       setComments([]);
     } finally {
-      setLoading(false);
+      // setLoading(false);
     }
   };
   const handleSubmit = async (e) => {
@@ -40,10 +40,10 @@ const DetailPage = () => {
       if (insert.data) {
         alert(insert.data.message);
       }
-      listComment.push({
-        name,
-        message,
-      });
+      // listComment.push({
+      //   name,
+      //   message,
+      // });
       fetchComment();
     } catch (error) {
       alert(error.response.data.message || 'error when input');
@@ -431,7 +431,7 @@ const DetailPage = () => {
       </div>
     </div>
   ) : (
-    <div className='flex w-full bg-black text-white pb-4 cursor-not-allowed h-svh text-4xl text-center'>
+    <div className='flex w-full bg-black text-white pb-4 cursor-not-allowed h-svh text-4xl text-center justify-center items-center'>
       Loading
     </div>
   );
