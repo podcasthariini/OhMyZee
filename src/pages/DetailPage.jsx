@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import video from '../assets/prewed-echidna.mp4';
+import video from '../assets/prewed-echidna360p.mp4';
 import echidnaHeader from '../assets/echidna-header.webp';
 import ReactPlayer from 'react-player/lazy';
 import netflixLogo from '../assets/netflix.png';
