@@ -1,8 +1,21 @@
-# React + Vite
+# How to run
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- install package
 
-Currently, two official plugins are available:
+```
+npm i
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- run project in development mode
+
+```
+npm run dev
+```
+
+- build project
+
+```
+npm run build
+```
+
+u can easily deploying at vercel, after editing the image or text from the web
