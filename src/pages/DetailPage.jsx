@@ -7,6 +7,8 @@ import logo4k from '../assets/4k.webp';
 import lovely from '../assets/lovely.jpg';
 import echidnaImage from '../assets/echidna.jpg';
 import GuestIcon from '../assets/Guest.webp';
+import axios from 'axios';
+const { VITE_API_URL } = import.meta.env;
 const DetailPage = () => {
   let listComment = [
     {
@@ -46,32 +48,60 @@ const DetailPage = () => {
       message: 'Apcb',
     },
   ];
+
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [comments, setComments] = useState(listComment);
+  const fetchComment = async () => {
+    try {
+      setLoading(true);
+      const { data } = await axios.get(`${VITE_API_URL}/wish`);
+      // setComments(data);
+      setComments(data.data);
+      setLoading(false);
+    } catch (error) {
+      alert('error when fetch comment');
+      setComments([]);
+    } finally {
+      setLoading(false);
+    }
+  };
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    listComment.push({
-      name,
-      message,
-    });
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    window.alert('success send wish');
-    setComments(listComment);
-    setName('');
-    setMessage('');
-    setIsSubmitting(false);
+    try {
+      e.preventDefault();
+      setIsSubmitting(true);
+      const insert = await axios.post(`${VITE_API_URL}/wish`, {
+        name,
+        message,
+      });
+      if (insert.data) {
+        alert(insert.data.message);
+      }
+      listComment.push({
+        name,
+        message,
+      });
+      fetchComment();
+    } catch (error) {
+      alert(error.response.data.message || 'error when input');
+    } finally {
+      setName('');
+      setMessage('');
+      setIsSubmitting(false);
+    }
   };
   const scrollCommentRef = useRef(null);
+
   useEffect(() => {
     if (scrollCommentRef.current) {
       scrollCommentRef.current.scrollTop =
         scrollCommentRef.current.scrollHeight;
     }
-  }, [comments]);
-  return (
+    fetchComment();
+  }, []);
+  return !loading ? (
     <div className='flex w-full bg-black text-white pb-4 cursor-not-allowed'>
       <div className='w-full max-w-md mx-auto flex flex-col relative flex-grow'>
         <div className='top-0 left-0 right-0'>
@@ -433,6 +463,10 @@ const DetailPage = () => {
           </div>
         </div>
       </div>
+    </div>
+  ) : (
+    <div className='flex w-full bg-black text-white pb-4 cursor-not-allowed h-svh text-4xl text-center'>
+      Loading
     </div>
   );
 };
