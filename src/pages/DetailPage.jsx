@@ -18,15 +18,16 @@ const DetailPage = () => {
   const fetchComment = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`${VITE_API_URL}/wish`);
+      const getComment = await axios.get(`${VITE_API_URL}/wish`);
       // setComments(data);
-      setComments(data.data);
-      setLoading(false);
+
+      setComments(getComment?.data?.data);
     } catch (error) {
       alert('error when fetch comment');
       setComments([]);
+      setLoading(false);
     } finally {
-      // setLoading(false);
+      setLoading(false);
     }
   };
   const handleSubmit = async (e) => {
