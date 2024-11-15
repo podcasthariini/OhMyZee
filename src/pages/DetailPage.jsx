@@ -10,50 +10,11 @@ import GuestIcon from '../assets/Guest.webp';
 import axios from 'axios';
 const { VITE_API_URL } = import.meta.env;
 const DetailPage = () => {
-  let listComment = [
-    {
-      name: 'Emilia',
-      message: 'Ihh sayangku denny kok ninggalin aku siii',
-    },
-    {
-      name: 'Rem',
-      message: 'Ihh sayangku denny kok ninggalin aku siii',
-    },
-    {
-      name: 'Priscillia',
-      message: 'Ihh sayangku denny kok ninggalin aku siii',
-    },
-    {
-      name: 'Crush',
-      message: 'Ihh sayangku denny kok ninggalin aku siii',
-    },
-    {
-      name: 'Mimi',
-      message: 'Ihh sayangku denny kok ninggalin aku siii',
-    },
-    {
-      name: 'Garf',
-      message: 'Selamat bahagia bos',
-    },
-    {
-      name: 'Al',
-      message: 'semoga bahagia bro',
-    },
-    {
-      name: 'Ram',
-      message: 'Barusu >_<',
-    },
-    {
-      name: 'Beatrice',
-      message: 'Apcb',
-    },
-  ];
-
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [comments, setComments] = useState(listComment);
+  const [comments, setComments] = useState([]);
   const fetchComment = async () => {
     try {
       setLoading(true);
@@ -95,12 +56,15 @@ const DetailPage = () => {
   const scrollCommentRef = useRef(null);
 
   useEffect(() => {
+    fetchComment();
+  }, []);
+  useEffect(() => {
     if (scrollCommentRef.current) {
       scrollCommentRef.current.scrollTop =
         scrollCommentRef.current.scrollHeight;
     }
-    fetchComment();
-  }, []);
+  }, [comments]);
+
   return !loading ? (
     <div className='flex w-full bg-black text-white pb-4 cursor-not-allowed'>
       <div className='w-full max-w-md mx-auto flex flex-col relative flex-grow'>
@@ -386,7 +350,7 @@ const DetailPage = () => {
             <div className='mt-6'>
               <header className='text-lg font-bold'>Wish for the couple</header>
               <div
-                className='max-h-[55svh] overflow-y-auto mt-2 bottom-0'
+                className='max-h-[55svh] min-h-[15svh] overflow-y-auto mt-2 bottom-0'
                 ref={scrollCommentRef}
               >
                 {comments.map((item, i) => (
@@ -400,7 +364,9 @@ const DetailPage = () => {
                       />
                     </div>
                     <div className='flex flex-col ps-2 justify-between items-start w-full h-full text-sm pt-2'>
-                      <div className='text-white text-sm'>{item.name}</div>
+                      <div className='text-white text-sm capitalize'>
+                        {item.name}
+                      </div>
                       <div className='text-gray-400'>{item.message}</div>
                     </div>
                   </div>
