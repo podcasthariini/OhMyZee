@@ -15,6 +15,14 @@ const DetailPage = () => {
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [comments, setComments] = useState([]);
+  const handleNameChange = (e) => {
+    const { value } = e.target;
+    if (/^[a-zA-Z\s]*$/.test(value)) {
+      setName(value);
+    } else {
+      window.alert('oops unsupported character found');
+    }
+  };
   const fetchComment = async () => {
     try {
       setLoading(true);
@@ -376,7 +384,7 @@ const DetailPage = () => {
                   <input
                     type='text'
                     value={name}
-                    onChange={(e) => setName(e.target.value)}
+                    onChange={(e) => handleNameChange(e)}
                     className='w-full mt-4 p-2 text-black font-sans'
                     disabled={isSubmitting}
                   />
