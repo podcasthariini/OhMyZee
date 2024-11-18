@@ -43,7 +43,7 @@ const HomePage = () => {
                   alt='NikahFix Logo'
                   className='w-20 h-auto mb-4'
                 />
-                <p className='text-2xl font-sans font-bold'>Denny & Echidna:</p>
+                <p className='text-2xl font-sans font-bold'>Usra & Echidna:</p>
                 <p className='text-2xl font-sans font-bold mb-4'>
                   Sebelum Hari H
                 </p>
