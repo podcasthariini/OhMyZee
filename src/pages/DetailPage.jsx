@@ -115,7 +115,7 @@ const DetailPage = () => {
             </div>
             <div className='flex flex-col mt-2'>
               <span className='bg-[#E50913] px-2 py-0 max-w-fit flex items-center justify-center rounded-sm'>
-                Coming soon on Monday, 17 January 2050.
+                Coming soon on Monday, 17 Januari 2050.
               </span>
               <div className='text-white mt-2'>
                 Setelah Usra Dan Zee dipertemukan di Antah-berantah dalam kondisi
