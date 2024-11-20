@@ -59,7 +59,7 @@ const HomePage = () => {
                   {[
                     'romantic',
                     'getmarried',
-                    'animegirls',
+                    'OhMyZee',
                     'zeebestgirls',
                   ].map((tag) => (
                     <span
