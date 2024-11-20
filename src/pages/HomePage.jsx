@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronUp } from 'lucide-react';
 import nikahFixLogo from '../assets/NIKAHFIX.webp';
 import guestIcon from '../assets/Guest.webp';
-import Image from '../assets/9.jpg';
+import Image from '../assets/8.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
