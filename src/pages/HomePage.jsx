@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { ChevronUp } from 'lucide-react';
 import nikahFixLogo from '../assets/NIKAHFIX.webp';
 import guestIcon from '../assets/Guest.webp';
-import Image from '../assets/zee1.jpg';
+import Image from '../assets/9.jpg';
 import { useNavigate } from 'react-router-dom';
 
 const HomePage = () => {
@@ -34,7 +34,7 @@ const HomePage = () => {
           <div className='w-full max-w-md mx-auto h-full flex flex-col'>
             <div
               className='relative w-full flex-grow bg-cover bg-center flex flex-col justify-end max-w-md'
-              style={{ backgroundImage: `url(${Image9})` }}
+              style={{ backgroundImage: `url(${Image})` }}
             >
               <div className='absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent' />
               <div className='relative z-10 flex flex-col justify-end p-4'>
