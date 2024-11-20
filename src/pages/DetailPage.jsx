@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import video from '../assets/prewed-echidna360p.mp4';
-import echidnaHeader from '../assets/echidna-header.webp';
+import Header from '../assets/Image8';
 import ReactPlayer from 'react-player/lazy';
 import netflixLogo from '../assets/netflix.png';
 import logo4k from '../assets/4k.webp';
@@ -131,7 +131,7 @@ const DetailPage = () => {
             <div className='mt-6'>
               <header className='text-lg font-bold'>Breaking News</header>
               <img
-                src={echidnaHeader}
+                src={Header}
                 alt=''
                 srcSet=''
                 style={{ aspectRatio: '16 / 9' }}
