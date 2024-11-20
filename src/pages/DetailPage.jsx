@@ -131,7 +131,7 @@ const DetailPage = () => {
             <div className='mt-6'>
               <header className='text-lg font-bold'>Breaking News</header>
               <img
-                src={echidnaHeader}
+                src={Image8}
                 alt=''
                 srcSet=''
                 style={{ aspectRatio: '16 / 9' }}
