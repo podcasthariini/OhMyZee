@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import video from 'https://youtu.be/Xu1wA7CfhQg';
+import video from '../assets/Zee.mp4';
 import Header from '../assets/Zee-UI.png';
 import ReactPlayer from 'react-player/lazy';
 import netflixLogo from '../assets/netflix.png';
