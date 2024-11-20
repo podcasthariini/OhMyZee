@@ -34,7 +34,7 @@ const HomePage = () => {
           <div className='w-full max-w-md mx-auto h-full flex flex-col'>
             <div
               className='relative w-full flex-grow bg-cover bg-center flex flex-col justify-end max-w-md'
-              style={{ backgroundImage: `url(${Image})` }}
+              style={{ backgroundImage: `url(${Image8})` }}
             >
               <div className='absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent' />
               <div className='relative z-10 flex flex-col justify-end p-4'>
