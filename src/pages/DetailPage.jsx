@@ -102,7 +102,7 @@ const DetailPage = () => {
           </div>
           <div className='flex flex-col mt-2'>
             <div className='text-white text-xl font-sans font-bold'>
-              Usra & Zee: Meinkah
+              Usra & Zee: Menikah
             </div>
             <div className='flex items-center'>
               <span className='text-green-500'>100% match</span>
@@ -119,8 +119,8 @@ const DetailPage = () => {
               </span>
               <div className='text-white mt-2'>
                 Setelah Usra Dan Zee dipertemukan di Antah-berantah dalam kondisi
-                tepat, di mana keduanya telah siap untuk memulai hubungan
-                bersama, tibalah mereka di awal perjalanan baru menuju
+                tepat dimana keduanya telah siap untuk memulai hubungan
+                bersama, tibalah mereka di awal perjalanan baru, yaitu menuju
                 pernikahan.
               </div>
               <div className='mt-2 text-xs text-gray-500'>
@@ -147,7 +147,7 @@ const DetailPage = () => {
                   Tapi sebelumnya, kami mohon maaf kepada teman dan kerabat
                   semua karena tidak bisa mengundang kalian hadir di hari
                   bahagia kami, dikarenakan pernikahan kami bersifat intimate
-                  wedding yang dilaksanakan di Bekasi dan hanya dihadiri oleh
+                  wedding yang dilaksanakan di Antah-berantah dan hanya dihadiri oleh
                   keluarga dan orang terdekat.
                 </p>
                 <p className='mt-4'>
@@ -220,8 +220,8 @@ const DetailPage = () => {
                   </div>
                 </div>
                 <div className='text-[#A3A1A1] text-sm'>
-                  Usra dan Zee pertama kali bertemu di isekai. Karena
-                  sering memiliki kepentingan yang berbahya, Zee jadi sering
+                  Usra dan Zee pertama kali bertemu di Antah-berantah. Karena
+                  sering memiliki kepentingan yang gatau dah, Zee jadi sering
                   bertemu dengan Usra.
                 </div>
                 <div className='flex flex-col'>
