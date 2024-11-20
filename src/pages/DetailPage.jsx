@@ -102,7 +102,7 @@ const DetailPage = () => {
           </div>
           <div className='flex flex-col mt-2'>
             <div className='text-white text-xl font-sans font-bold'>
-              Usra & Zee:Nikah Ama Anime
+              Usra & Zee: Meinkah
             </div>
             <div className='flex items-center'>
               <span className='text-green-500'>100% match</span>
@@ -115,17 +115,17 @@ const DetailPage = () => {
             </div>
             <div className='flex flex-col mt-2'>
               <span className='bg-[#E50913] px-2 py-0 max-w-fit flex items-center justify-center rounded-sm'>
-                Coming soon on Tuesday, 24 October 2024
+                Coming soon on Monday, 17 January 2050.
               </span>
               <div className='text-white mt-2'>
-                Setelah Usra Dan Zee dipertemukan di isekai dalam kondisi
+                Setelah Usra Dan Zee dipertemukan di Antah-berantah dalam kondisi
                 tepat, di mana keduanya telah siap untuk memulai hubungan
                 bersama, tibalah mereka di awal perjalanan baru menuju
-                pernikahan
+                pernikahan.
               </div>
               <div className='mt-2 text-xs text-gray-500'>
                 "Segala sesuatu Kami ciptakan berpasang-pasangan agar kamu
-                mengingat (kebesaran Allah)" (Q.S Az-Zariyah: 49)
+                mengingat (kebesaran Allah)" (Q.S Az-Zariyah: 49).
               </div>
             </div>
             <div className='mt-6'>
@@ -222,7 +222,7 @@ const DetailPage = () => {
                 <div className='text-[#A3A1A1] text-sm'>
                   Usra dan Zee pertama kali bertemu di isekai. Karena
                   sering memiliki kepentingan yang berbahya, Zee jadi sering
-                  bertemu dengan Usra
+                  bertemu dengan Usra.
                 </div>
                 <div className='flex flex-col'>
                   <div className='grid grid-cols-2 gap-5'>
@@ -245,7 +245,7 @@ const DetailPage = () => {
                 </div>
                 <div className='text-[#A3A1A1]  text-sm'>
                   Hari demi Hari terlewati rasa cinta pun tumbuh diantara mereka
-                  berdua
+                  berdua.
                 </div>
                 <div className='flex flex-col'>
                   <div className='grid grid-cols-2 gap-5'>
@@ -267,8 +267,8 @@ const DetailPage = () => {
                   </div>
                 </div>
                 <div className='text-[#A3A1A1] text-sm'>
-                  Seringkali Usra memberitahu kepada Echidan bahwa ia tertarik
-                  dan ingin menjalanin Hubungan lebih serius
+                  Seringkali Usra memberitahu kepada Zee bahwa ia tertarik
+                  dan ingin menjalanin Hubungan lebih serius.
                 </div>
                 <div className='flex flex-col'>
                   <div className='grid grid-cols-2 gap-5'>
@@ -290,7 +290,7 @@ const DetailPage = () => {
                   </div>
                 </div>
                 <div className='text-[#A3A1A1]  text-sm'>
-                  Kasihan wibu halu dik
+                  Kasihan VVOTA halu cuy 😭☝
                 </div>
               </div>
             </div>
@@ -431,15 +431,15 @@ const DetailPage = () => {
               <span>Can’t wait to see u again!</span>
             </div>
             <div className='mt-12 text-xs text-center text-[#A3A1A1]'>
-              Cloning with ❤️ by janexmgd & supported by Zee
+              Cloning with ❤️ by janexmgd & supported by SGBTeam
             </div>
             <div className='mt-5 text-xs cursor-pointer text-center mb-5'>
               <a
-                href='https://www.nikahfix.com'
+                href='https://xsrazy.my.id'
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                thx nikahfix.com
+                Thanks NikahFIX
               </a>
             </div>
           </div>
