@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import video from '../assets/prewed-echidna360p.mp4';
-import Header from '../assets/Image8.jpg';
+import Header from '../assets/8.jpg';
 import ReactPlayer from 'react-player/lazy';
 import netflixLogo from '../assets/netflix.png';
 import logo4k from '../assets/4k.webp';
